@@ -13,6 +13,10 @@ nav {
   border-bottom: 1px solid #ddd;
   position: sticky;
   top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -20,6 +24,14 @@ nav a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
+}
+
+.logo {
+  font-size: 1.1rem;
+}
+
+.nav-links a {
+  margin-left: 15px;
 }
 
 nav a:hover {
@@ -31,10 +43,6 @@ section {
   max-width: 900px;
   margin: 0 auto;
   border-bottom: 1px solid #e5e5e5;
-}
-
-h1, h2, h3 {
-  margin-top: 0;
 }
 
 h1 {
@@ -62,12 +70,21 @@ ul {
   background-color: #00274c;
   color: white;
   border-radius: 4px;
+  text-decoration: none;
 }
-
 .button.secondary {
   background-color: white;
   color: #00274c;
   border: 1px solid #00274c;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button.secondary:hover {
+  background-color: #00274c;
+  color: white;
 }
 
 .resume-link {
@@ -76,3 +93,58 @@ ul {
   color: #00274c;
   font-weight: bold;
 }
+
+.specialty {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.1rem;
+  max-width: 600px;
+}
+
+.landing-details {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.experience-item {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+
+.time {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #00274c;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.project-item {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 0.9rem;
+}
+

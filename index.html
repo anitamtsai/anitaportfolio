@@ -4,29 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anita's Portfolio</title>
-    <link rel="stylesheet" href="css/style.css"></head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
 <body>
 
 <nav>
-  <a href="#landing">Anita Tsai</a>
+  <a href="#landing" class="logo">Anita Tsai</a>
   <a href="#about">About</a>
   <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
-  <a href="#references">What other's say</a>
+  <a href="#references">References</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <section id="landing" class="landing">
+  <p class="specialty">Cognitive Science · UX · Research</p>
   <h1>Anita Marianne Tsai</h1>
-  <p>Cognitive Scientist and incoming HCI Master's student at CMU.</p>
-  <p>Designing systems where human insight meets technology.</p>
-
-  <p><strong>Currently:</strong> Incoming CMU MHCI '27</p>
-  <p><strong>Degree:</strong> B.S. Cognitive Science & Psychology, UMich</p>
-  <p><strong>GPA:</strong> 3.88</p>
-  <p><strong>Languages:</strong> English, Mandarin, Python, C++</p>
-  <p><strong>Location:</strong> Ann Arbor → Pittsburgh</p>
+  <p class="intro">Cognitive scientist, researcher, and incoming HCI master's student at Carnegie Mellon.</p>
+  <p class="intro">I'm interested in designing systems that make human decision-making more thoughtful, accessible, and effective.</p>
+ 
+  <div class="landing-details">
+    <p><strong>Currently:</strong> Incoming CMU MHCI '27</p>
+    <p><strong>Degree:</strong> B.S. Cognitive Science & Psychology, UMich</p>
+    <p><strong>GPA:</strong> 3.88</p>
+    <p><strong>Languages:</strong> English, Mandarin, Python, C++</p>
+    <p><strong>Location:</strong> Taiwan → Ann Arbor → Pittsburgh</p>
+  </div>
 
   <a href="#projects" class="button">View Projects</a>
   <a href="#contact" class="button secondary">Get in Touch</a>
@@ -65,63 +69,82 @@
   <h2>Experience</h2>
   <a href="Anita_Tsai_Resume.pdf">Download Resume</a>
 
-  <h3>Deloitte – Risk Advisory Intern</h3>
-  <p>Jun – Aug 2024 | Taipei</p>
-  <ul>
-    <li>Analyzed greenwashing across 7 industries</li>
-    <li>Reviewed ESG data from 30+ companies</li>
-    <li>Improved emissions tracking accuracy</li>
-  </ul>
+  <div class="experience-item">
+    <h3>Deloitte – Risk Advisory Intern</h3>
+    <p class="time">Jun – Aug 2024 | Taipei</p>
+    <ul>
+      <li>Analyzed greenwashing across 7 industries</li>
+      <li>Reviewed ESG data from 30+ companies</li>
+      <li>Improved emissions tracking accuracy</li>
+    </ul>
+  </div>
 
-  <h3>WeMo Scooters – Product Intern</h3>
-  <p>Jun – Aug 2023 | Taipei</p>
-  <ul>
-    <li>Built pipeline of 250+ leads</li>
-    <li>Scheduled 30+ product demos</li>
-    <li>Launched WeMoNexus website</li>
-  </ul>
+  <div class="experience-item">
+    <h3>WeMo Scooters – Product Intern</h3>
+    <p class="time">Jun – Aug 2023 | Taipei</p>
+    <ul>
+      <li>Built pipeline of 250+ leads</li>
+      <li>Scheduled 30+ product demos</li>
+      <li>Launched WeMoNexus website</li>
+    </ul>
+  </div>
 
-  <h3>Amphenol – Market Strategy Intern</h3>
-  <p>Aug 2022 – Jun 2023 | Taipei</p>
-  <ul>
-    <li>Increased client acquisition by 30%</li>
-    <li>Conducted market research</li>
-    <li>Improved CRM tracking</li>
-  </ul>
+  <div class="experience-item">
+    <h3>Amphenol – Market Strategy Intern</h3>
+    <p class="time">Aug 2022 – Jun 2023 | Taipei</p>
+    <ul>
+      <li>Increased client acquisition by 30%</li>
+      <li>Conducted market research</li>
+      <li>Improved CRM tracking</li>
+    </ul>
+  </div>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
 
-  <h3>HelloTalk UX Analysis</h3>
-  <p>Analyzed social design and usability issues in a language learning app.</p>
+  <div class="project-item">
+    <h3>HelloTalk UX Analysis</h3>
+    <p>Analyzed social design and usability issues in a language learning app.</p>
+  </div>
 
-  <h3>AI Hiring Bias Study</h3>
-  <p>Explored bias in AI hiring systems and proposed ethical improvements.</p>
+  <div class="project-item">
+    <h3>AI Hiring Bias Study</h3>
+    <p>Explored bias in AI hiring systems and proposed ethical improvements.</p>
+  </div>
 
-  <h3>Sick Leave Decision Research</h3>
-  <p>Studying how cognitive biases affect workplace health decisions.</p>
+  <div class="project-item">
+    <h3>Sick Leave Decision Research</h3>
+    <p>Studying how cognitive biases affect workplace health decisions.</p>
+  </div>
 
-  <h3>WeMoNexus Website</h3>
-  <p>Designed bilingual B2B platform for enterprise engagement.</p>
+  <div class="project-item">
+    <h3>WeMoNexus Website</h3>
+    <p>Designed bilingual B2B platform for enterprise engagement.</p>
+  </div>
 </section>
 
 <section id="references">
-  <h2>What other's say about me</h2>
+  <h2>Here from what others have to say</h2>
 
   <p>quote 1</p>
   <p>quote 2</p>
 
 </section>
 
+
 <section id="contact">
   <h2>Contact</h2>
 
-  <p>Email: anitamt@umich.edu</p>
-  <p>Phone: 734-395-7410</p>
-  <p>LinkedIn: https://www.linkedin.com/in/anitamariannetsai/ </p>
-  <p>GitHub: https://github.com/anitamtsai </p>
+  <p>Email: <a href="mailto:anitamt@umich.edu">anitamt@umich.edu</a></p>
+  <p>Phone: <a href="tel:7343957410">734-395-7410</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/anitamariannetsai/" target="_blank">anitamariannetsai</a></p>
+  <p>GitHub: <a href="https://github.com/anitamtsai" target="_blank">anitamtsai</a></p>
 </section>
 
 </body>
 </html>
+
+<footer>
+  <p>© 2026 Anita Marianne Tsai</p>
+</footer>
