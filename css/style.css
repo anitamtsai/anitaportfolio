@@ -1,12 +1,4 @@
-/* 
-  Notes:
-  - clamp() used for scalable heading sizing:
-    https://www.w3schools.com/cssref/func_clamp.php
-  - sticky nav behavior referenced from MDN:
-    https://developer.mozilla.org/en-US/docs/Web/CSS/position
-  - box-sizing reset is a common pattern to make spacing easier to control
-*/
-
+/* basic reset so padding/border do not make elements overflow */
 * {
   box-sizing: border-box;
 }
@@ -26,6 +18,7 @@ body {
   overflow-x: hidden;
 }
 
+/* general links */
 a {
   color: #00274c;
 }
@@ -34,13 +27,11 @@ a:hover {
   opacity: 0.8;
 }
 
-/* 
-  Sticky nav so users can jump between sections more easily.
-  I kept the layout simple instead of using a hamburger menu.
-*/
+/* simple sticky nav so section links stay accessible */
 nav {
   position: sticky;
   top: 0;
+  z-index: 100;
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
   padding: 16px 20px;
@@ -63,7 +54,7 @@ nav a:hover {
   font-size: 18px;
 }
 
-
+/* shared section spacing */
 section {
   margin: 0 auto;
   padding: 48px 20px;
@@ -74,6 +65,7 @@ main {
   width: 100%;
 }
 
+/* type */
 h1 {
   font-size: clamp(40px, 8vw, 72px);
   line-height: 1.05;
@@ -88,7 +80,7 @@ h2 {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 0;
   margin-bottom: 8px;
 }
@@ -101,23 +93,26 @@ ul {
   padding-left: 20px;
 }
 
+/* ---------------- LANDING ---------------- */
+/* mobile first: stack text and card vertically */
 #landing {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 28px;
 }
 
 .landing-left {
-  max-width: 600px;
+  max-width: 620px;
 }
 
 .landing-tag {
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: black;
+  color: #444;
   margin-bottom: 10px;
 }
+
 .landing-name {
   font-size: clamp(44px, 9vw, 80px);
   line-height: 1.05;
@@ -126,10 +121,10 @@ ul {
 
 .landing-bio {
   font-size: 16px;
-  color: black;
+  color: #2f2f2f;
   line-height: 1.7;
   margin-bottom: 20px;
-  max-width: 600px;
+  max-width: 620px;
 }
 
 .landing-buttons {
@@ -151,7 +146,7 @@ ul {
   transition: 0.2s ease;
 }
 
-.button.primary{
+.button.primary {
   background: #1a1612;
   color: #fff8e7;
   border-color: #1a1612;
@@ -171,18 +166,14 @@ ul {
 }
 
 .button.secondary:hover {
-  background: #a7abde;
-  border-color: #a7abde;
+  background: #1a1612;
+  border-color: #1a1612;
   color: #ffffff;
   opacity: 1;
 }
 
-/* right side info card */
-.landing-right {
-  width: 100%;
-}
-
-.landing-card {
+/* right side card */
+.resume-preview {
   width: 100%;
   background: #faf8f4;
   border: 1px solid #d4c9bc;
@@ -190,44 +181,80 @@ ul {
   padding: 20px;
 }
 
-/* 
-  Table-like row layout:
-  label on left, value on right
-  used flex here because the content length varies a lot
-*/
-.data-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 14px 0;
-  border-bottom: 1px solid #d4c9bc;
+/* name inside preview card */
+.resume-preview h3 {
+  font-size: 28px;
+  margin-bottom: 4px;
 }
 
-.data-row:last-child {
-  border-bottom: none;
+.subtitle {
+  font-size: 13px;
+  color: #6b5f52;
+  margin-bottom: 16px;
 }
 
-.data-label {
-  width: 40%;
+/* divider lines in the preview card */
+.resume-divider {
+  height: 1px;
+  background: #d4c9bc;
+  margin: 16px 0;
+}
+
+/* section labels like Education */
+.resume-section-label {
   font-size: 12px;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #6b5f52;
+  color: #7a6d60;
+  margin-bottom: 8px;
 }
 
-.data-value {
-  width: 60%;
+.resume-item {
+  margin-bottom: 12px;
+}
+
+.resume-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1612;
+  margin-bottom: 2px;
+}
+
+.resume-sub {
+  font-size: 14px;
+  color: #5f564d;
+  line-height: 1.5;
+}
+
+/* this is the wrapper around the resume download button */
+.resume-container {
+  margin-top: 20px;
+}
+
+.button.primary, .button.secondary{
+  padding: 12px 18px;
   font-size: 14px;
   font-weight: 600;
-  color: #1a1612;
-  text-align: right;
+  border-radius: 6px;
+  border: 1px solid #1a1612;
+  background: #1a1612;
+  color: #fff8e7;
 }
 
+.button.primary:hover, .button.secondary:hover {
+  background: #a7abde;
+  border-color: #a7abde;
+  color: #1a1612;
+  opacity: 1;
+}
+
+/* ---------------- ABOUT ---------------- */
 #about p {
   max-width: 700px;
 }
 
+/* ---------------- EXPERIENCE ---------------- */
 .section-heading {
   margin-bottom: 20px;
 }
@@ -253,6 +280,7 @@ ul {
   border-radius: 8px;
 }
 
+/* ---------------- PROJECTS ---------------- */
 .project-item {
   background-color: #ffffff;
   padding: 20px;
@@ -265,17 +293,17 @@ ul {
   display: block;
 }
 
-
+/* ---------------- REFERENCES ---------------- */
 #references p {
   max-width: 700px;
 }
 
-
+/* ---------------- CONTACT ---------------- */
 #contact p {
   margin-bottom: 10px;
 }
 
-
+/* ---------------- FOOTER ---------------- */
 footer {
   text-align: center;
   padding: 24px 16px;
@@ -283,7 +311,8 @@ footer {
   font-size: 14px;
 }
 
-
+/* ---------------- LARGER SCREENS ---------------- */
+/* only add layout changes once screen is wider */
 @media (min-width: 768px) {
   nav {
     padding: 16px 32px;
@@ -291,14 +320,15 @@ footer {
 
   section {
     padding: 64px 32px;
+    max-width: 1100px;
   }
 
   #landing {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
-    gap: 48px;
+    gap: 40px;
     align-items: center;
-    min-height: 85vh;
+    min-height: 80vh;
   }
 
   .landing-buttons {
@@ -306,12 +336,12 @@ footer {
     flex-wrap: wrap;
   }
 
-  .landing-card {
+  .resume-preview {
     padding: 28px;
   }
 
-  .data-value {
-    font-size: 15px;
+  .resume-preview h3 {
+    font-size: 32px;
   }
 
   .section-heading {
@@ -330,4 +360,14 @@ footer {
   .project-item {
     margin-bottom: 0;
   }
+}
+
+.photo{
+  width:70%;
+  margin:auto;
+  align-items: center;
+}
+
+.landing-buttons{
+  align-items: center;
 }
