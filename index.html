@@ -1,150 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anita's Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anita's Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+  <nav>
+    <a href="#landing" class="logo">Anita Tsai</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#references">References</a>
+    <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-<nav>
-  <a href="#landing" class="logo">Anita Tsai</a>
-  <a href="#about">About</a>
-  <a href="#experience">Experience</a>
-  <a href="#projects">Projects</a>
-  <a href="#references">References</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <main>
+    <section id="landing">
+      <div class="landing-left">
+        <p class="landing-tag">HCI · UX · Research</p>
 
-<section id="landing" class="landing">
-  <p class="specialty">Cognitive Science · UX · Research</p>
-  <h1>Anita Marianne Tsai</h1>
-  <p class="intro">Cognitive scientist, researcher, and incoming HCI master's student at Carnegie Mellon.</p>
-  <p class="intro">I'm interested in designing systems that make human decision-making more thoughtful, accessible, and effective.</p>
- 
-  <div class="landing-details">
-    <p><strong>Currently:</strong> Incoming CMU MHCI '27</p>
-    <p><strong>Degree:</strong> B.S. Cognitive Science & Psychology, UMich</p>
-    <p><strong>GPA:</strong> 3.88</p>
-    <p><strong>Languages:</strong> English, Mandarin, Python, C++</p>
-    <p><strong>Location:</strong> Taiwan → Ann Arbor → Pittsburgh</p>
-  </div>
+        <h1 class="landing-name">
+          Anita Tsai
+        </h1>
 
-  <a href="#projects" class="button">View Projects</a>
-  <a href="#contact" class="button secondary">Get in Touch</a>
-</section>
+        <p class="landing-bio">
+          Cognitive Scientist and incoming HCI Master's student at CMU,
+          designing systems where human insight meets technology from ESG
+          frameworks to language learning apps.
+        </p>
 
-<section id="about">
-  <h2>About Me</h2>
+        <div class="landing-buttons">
+          <a href="#projects" class="button primary">View Projects</a>
+          <a href="#contact" class="button secondary">Get in Touch</a>
+        </div>
+      </div>
 
-  <p>
-    I'm a graduating senior at the University of Michigan studying
-    Cognitive Science and Psychology with a focus on UX Design.
-  </p>
+      <div class="landing-right">
+        <div class="landing-card">
+          <div class="data-row">
+            <span class="data-label">Currently</span>
+            <span class="data-value">Incoming CMU MHCI '27</span>
+          </div>
 
-  <p>
-    I've worked in consulting, product management, and strategy across Deloitte,
-    WeMo Scooters, and Amphenol.
-  </p>
+          <div class="data-row">
+            <span class="data-label">Degree</span>
+            <span class="data-value">B.S. Cognitive Science &amp; Psychology, UMich</span>
+          </div>
 
-  <p>
-    I research how cognitive biases like present bias and loss aversion
-    affect sick-leave decisions.
-  </p>
+          <div class="data-row">
+            <span class="data-label">GPA</span>
+            <span class="data-value">3.88 / 4.0</span>
+          </div>
 
-  <h3>Skills</h3>
-  <ul>
-    <li>UX Research & Design</li>
-    <li>Behavioral Science</li>
-    <li>Product Management</li>
-    <li>ESG & Risk Advisory</li>
-    <li>Python, C++, SPSS</li>
-    <li>Salesforce, Apollo</li>
-  </ul>
-</section>
+          <div class="data-row">
+            <span class="data-label">Languages</span>
+            <span class="data-value">English · Mandarin · Python · C++</span>
+          </div>
 
-<section id="experience">
-  <h2>Experience</h2>
-  <a href="Anita_Tsai_Resume.pdf">Download Resume</a>
+          <div class="data-row">
+            <span class="data-label">Based in</span>
+            <span class="data-value">Ann Arbor, MI → Pittsburgh, PA</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <div class="experience-item">
-    <h3>Deloitte – Risk Advisory Intern</h3>
-    <p class="time">Jun – Aug 2024 | Taipei</p>
-    <ul>
-      <li>Analyzed greenwashing across 7 industries</li>
-      <li>Reviewed ESG data from 30+ companies</li>
-      <li>Improved emissions tracking accuracy</li>
-    </ul>
-  </div>
+    <section id="about">
+      <h2>About Me</h2>
 
-  <div class="experience-item">
-    <h3>WeMo Scooters – Product Intern</h3>
-    <p class="time">Jun – Aug 2023 | Taipei</p>
-    <ul>
-      <li>Built pipeline of 250+ leads</li>
-      <li>Scheduled 30+ product demos</li>
-      <li>Launched WeMoNexus website</li>
-    </ul>
-  </div>
+      <p>
+        I'm a graduating senior at the University of Michigan studying
+        Cognitive Science and Psychology with a focus on UX Design.
+      </p>
 
-  <div class="experience-item">
-    <h3>Amphenol – Market Strategy Intern</h3>
-    <p class="time">Aug 2022 – Jun 2023 | Taipei</p>
-    <ul>
-      <li>Increased client acquisition by 30%</li>
-      <li>Conducted market research</li>
-      <li>Improved CRM tracking</li>
-    </ul>
-  </div>
-</section>
+      <p>
+        I've worked in consulting, product management, and strategy across
+        Deloitte, WeMo Scooters, and Amphenol.
+      </p>
 
-<section id="projects">
-  <h2>Projects</h2>
+      <p>
+        I research how cognitive biases like present bias and loss aversion
+        affect sick-leave decisions.
+      </p>
 
-  <div class="project-item">
-    <h3>HelloTalk UX Analysis</h3>
-    <p>Analyzed social design and usability issues in a language learning app.</p>
-  </div>
+      <h3>Skills</h3>
+      <ul>
+        <li>UX Research &amp; Design</li>
+        <li>Behavioral Science</li>
+        <li>Product Management</li>
+        <li>ESG &amp; Risk Advisory</li>
+        <li>Python, C++, SPSS</li>
+        <li>Salesforce, Apollo</li>
+      </ul>
+    </section>
 
-  <div class="project-item">
-    <h3>AI Hiring Bias Study</h3>
-    <p>Explored bias in AI hiring systems and proposed ethical improvements.</p>
-  </div>
+    <section id="experience">
+      <div class="section-heading">
+        <h2>Experience</h2>
+        <a href="Anita_Tsai_Resume.pdf" class="resume-link">Download Resume</a>
+      </div>
 
-  <div class="project-item">
-    <h3>Sick Leave Decision Research</h3>
-    <p>Studying how cognitive biases affect workplace health decisions.</p>
-  </div>
+      <div class="card-list">
+        <article class="experience-item">
+          <h3>Deloitte – Risk Advisory Intern</h3>
+          <p class="time">Jun – Aug 2024 | Taipei</p>
+          <ul>
+            <li>Analyzed greenwashing across 7 industries</li>
+            <li>Reviewed ESG data from 30+ companies</li>
+            <li>Improved emissions tracking accuracy</li>
+          </ul>
+        </article>
 
-  <div class="project-item">
-    <h3>WeMoNexus Website</h3>
-    <p>Designed bilingual B2B platform for enterprise engagement.</p>
-  </div>
-</section>
+        <article class="experience-item">
+          <h3>WeMo Scooters – Product Intern</h3>
+          <p class="time">Jun – Aug 2023 | Taipei</p>
+          <ul>
+            <li>Built pipeline of 250+ leads</li>
+            <li>Scheduled 30+ product demos</li>
+            <li>Launched WeMoNexus website</li>
+          </ul>
+        </article>
 
-<section id="references">
-  <h2>Here from what others have to say</h2>
+        <article class="experience-item">
+          <h3>Amphenol – Market Strategy Intern</h3>
+          <p class="time">Aug 2022 – Jun 2023 | Taipei</p>
+          <ul>
+            <li>Increased client acquisition by 30%</li>
+            <li>Conducted market research</li>
+            <li>Improved CRM tracking</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-  <p>quote 1</p>
-  <p>quote 2</p>
+    <section id="projects">
+      <h2>Projects</h2>
 
-</section>
+      <div class="card-list">
+        <article class="project-item">
+          <h3><a href="hellotalk.html">HelloTalk UX Analysis</a></h3>
+          <p>
+            Analyzed how social interaction design supports engagement but
+            creates tradeoffs for structured language learning.
+          </p>
+        </article>
 
+        <article class="project-item">
+          <h3>AI Hiring Bias Study</h3>
+          <p>
+            Explored bias in AI hiring systems and proposed ethical improvements.
+          </p>
+        </article>
 
-<section id="contact">
-  <h2>Contact</h2>
+        <article class="project-item">
+          <h3>Sick Leave Decision Research</h3>
+          <p>
+            Studying how cognitive biases affect workplace health decisions.
+          </p>
+        </article>
 
-  <p>Email: <a href="mailto:anitamt@umich.edu">anitamt@umich.edu</a></p>
-  <p>Phone: <a href="tel:7343957410">734-395-7410</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/anitamariannetsai/" target="_blank">anitamariannetsai</a></p>
-  <p>GitHub: <a href="https://github.com/anitamtsai" target="_blank">anitamtsai</a></p>
-</section>
+        <article class="project-item">
+          <h3>WeMoNexus Website</h3>
+          <p>
+            Designed bilingual B2B platform for enterprise engagement.
+          </p>
+        </article>
+      </div>
+    </section>
 
+    <section id="references">
+      <h2>Hear What Others Have to Say</h2>
+      <p>Quote 1</p>
+      <p>Quote 2</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:anitamt@umich.edu">anitamt@umich.edu</a></p>
+      <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/anitamariannetsai/" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
+      </p>
+      <p>
+        GitHub:
+        <a href="https://github.com/anitamtsai" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Anita Marianne Tsai</p>
+  </footer>
 </body>
 </html>
-
-<footer>
-  <p>© 2026 Anita Marianne Tsai</p>
-</footer>
