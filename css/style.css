@@ -40,8 +40,6 @@ a:hover {
 /* simple sticky nav so section links stay accessible */
 nav {
   position: sticky;
-  top: 0;
-  z-index: 100;
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
   padding: 16px 20px;
@@ -101,10 +99,9 @@ p {
 
 ul {
   padding-left: 20px;
-}
+  align-items: flex-end;
 
-/* ---------------- LANDING ---------------- */
-/* mobile first: stack text and card vertically */
+}
 #landing {
   display: flex;
   flex-direction: column;
@@ -127,59 +124,6 @@ ul {
   font-size: clamp(44px, 9vw, 80px);
   line-height: 1.05;
   margin-bottom: 16px;
-}
-
-.landing-bio {
-  font-size: 16px;
-  color: #2f2f2f;
-  line-height: 1.7;
-  margin-bottom: 20px;
-  max-width: 620px;
-}
-
-.landing-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-start;
-}
-
-.button.primary,
-.button.secondary {
-  display: inline-block;
-  padding: 12px 18px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 6px;
-  border: 1px solid;
-  transition: 0.2s ease;
-}
-
-.button.primary {
-  background: #1a1612;
-  color: #fff8e7;
-  border-color: #1a1612;
-}
-
-.button.primary:hover {
-  background: #a7abde;
-  border-color: #a7abde;
-  color: #1a1612;
-  opacity: 1;
-}
-
-.button.secondary {
-  background: transparent;
-  color: #1a1612;
-  border-color: #cfc7bb;
-}
-
-.button.secondary:hover {
-  background: #1a1612;
-  border-color: #1a1612;
-  color: #ffffff;
-  opacity: 1;
 }
 
 /* right side card */
@@ -242,16 +186,6 @@ ul {
   margin-top: 20px;
 }
 
-.button.primary, .button.secondary{
-  padding: 12px 18px;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 6px;
-  border: 1px solid #1a1612;
-  background: #1a1612;
-  color: #fff8e7;
-}
-
 .button.primary:hover, .button.secondary:hover {
   background: #a7abde;
   border-color: #a7abde;
@@ -259,12 +193,34 @@ ul {
   opacity: 1;
 }
 
-/* ---------------- ABOUT ---------------- */
+.button.primary,
+.button.secondary {
+  display: inline-block;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid;
+  transition: 0.2s ease;
+}
+
+.button.primary {
+  background: #1a1612;
+  color: #fff8e7;
+  border-color: #1a1612;
+}
+
+.button.secondary {
+  background: transparent;
+  color: #1a1612;
+  border-color: #cfc7bb;
+}
+
 #about p {
   max-width: 700px;
 }
 
-/* ---------------- EXPERIENCE ---------------- */
 .section-heading {
   margin-bottom: 20px;
 }
@@ -290,7 +246,6 @@ ul {
   border-radius: 8px;
 }
 
-/* ---------------- PROJECTS ---------------- */
 .project-item {
   background-color: #ffffff;
   padding: 20px;
@@ -303,17 +258,14 @@ ul {
   display: block;
 }
 
-/* ---------------- REFERENCES ---------------- */
 #references p {
   max-width: 700px;
 }
 
-/* ---------------- CONTACT ---------------- */
 #contact p {
   margin-bottom: 10px;
 }
 
-/* ---------------- FOOTER ---------------- */
 footer {
   text-align: center;
   padding: 24px 16px;
@@ -321,8 +273,6 @@ footer {
   font-size: 14px;
 }
 
-/* ---------------- LARGER SCREENS ---------------- */
-/* only add layout changes once screen is wider */
 @media (min-width: 768px) {
   nav {
     padding: 16px 32px;
