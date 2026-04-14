@@ -2,6 +2,16 @@
 * {
   box-sizing: border-box;
 }
+/*took from Garrett project */
+.skip a{
+     position: absolute; 
+     top: -65px; 
+     transition: top, 1s, ease-in;
+}
+.skip a:focus{
+     top: 85px;
+}
+
 
 html {
   scroll-behavior: smooth;
