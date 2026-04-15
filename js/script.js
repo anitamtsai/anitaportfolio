@@ -51,3 +51,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+/*code from https://codepen.io/TPG/pen/pvJLvvo */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach((card) => {
+    const flipCard = () => {
+      card.classList.toggle("is-flipped");
+    };
+
+    card.addEventListener("click", function (event) {
+      // Don't flip if the user clicks a link inside the card
+      if (event.target.tagName === 'A') return;
+      flipCard();
+    });
+
+    // Listen for Enter key when card is focused
+    card.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        flipCard();
+      }
+    });
+  });
+});
