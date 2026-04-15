@@ -1,55 +1,56 @@
 /*code from https://codepen.io/mishelshaji/pen/EGZrbO */
-document.addEventListener("DOMContentLoaded", function () {
-  const counters = document.querySelectorAll(".counter-number");
 
-  function animateCounter(counter) {
-    const target = parseInt(counter.dataset.max, 10);
-    const duration = 2000;
-    const startTime = performance.now();
+const prefersReducedMotion = () => 
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    function updateCounter(currentTime) {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const currentValue = Math.floor(progress * target);
+function inVisible(element) {
+  const windowTop = window.scrollY;
+  const windowBottom = windowTop + window.innerHeight;
+  const elementTop = element.offsetTop;
+  const elementBottom = elementTop + element.offsetHeight;
 
-      counter.textContent = currentValue;
+  if (elementBottom <= windowBottom && elementTop >= windowTop) {
+    animateCounter(element);
+  }
+}
 
-      if (progress < 1) {
-        requestAnimationFrame(updateCounter);
-      } else {
-        counter.textContent = target;
-      }
-    }
+function animateCounter(element) {
+  /* If it's already been counted, stop */
+  if (element.classList.contains('counted')) return;
 
-    requestAnimationFrame(updateCounter);
+  const rawValue = element.getAttribute('data-max');
+  
+  if (prefersReducedMotion()) {
+    element.textContent = rawValue;
+    element.classList.add('counted'); 
+    return; 
   }
 
-  function startCounter(counter) {
-    if (!counter.classList.contains("counted")) {
-      counter.classList.add("counted");
-      animateCounter(counter);
+  element.classList.add('counted');
+  const targetNumber = parseInt(rawValue, 10);
+  const hasPlus = rawValue.includes('+');
+  let currentNumber = 0;
+  
+  const duration = 2000; 
+  const startTime = performance.now();
+
+  function step(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    currentNumber = Math.floor(progress * targetNumber);
+
+    element.textContent = currentNumber + (hasPlus && progress === 1 ? "+" : "");
+
+    if (progress < 1) {
+      requestAnimationFrame(step);
     }
   }
+  requestAnimationFrame(step);
+}
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          startCounter(entry.target);
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
-
-  counters.forEach((counter) => {
-    observer.observe(counter);
-
-    const rect = counter.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-      startCounter(counter);
-    }
-  });
+window.addEventListener('scroll', function() {
+  const counters = document.querySelectorAll('.counter-number');
+  counters.forEach(counter => inVisible(counter));
 });
 
 /*code from https://codepen.io/TPG/pen/pvJLvvo */

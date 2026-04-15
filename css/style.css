@@ -434,4 +434,8 @@ footer {
   .faces {
     transition: none;
   }
+.counter-item {
+    animation: none;
+    transition-duration: 0s;
+  }
 }
