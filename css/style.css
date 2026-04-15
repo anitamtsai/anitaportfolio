@@ -276,10 +276,6 @@ ul {
   display: block;
 }
 
-#references p {
-  max-width: 700px;
-}
-
 #contact p {
   margin-bottom: 10px;
 }
@@ -290,6 +286,42 @@ footer {
   color: #666;
   font-size: 14px;
 }
+
+
+/* https://codepen.io/mishelshaji/pen/EGZrbO  */
+
+.counter-grid {
+  display: grid;
+  grid-template-columns:1fr;
+  gap: 20px;
+}
+
+.counter-item {
+  background-color: #ffffff;
+  padding: 28px 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.counter-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.counter-number {
+  font-size: clamp(36px, 8vw, 56px);
+  line-height: 1;
+  margin-bottom: 8px;
+  color: #1a1612;
+}
+
+.counter-label {
+  margin: 0;
+  color: #5f564d;
+  font-size: 15px;
+}
+
 
 @media (min-width: 768px) {
   nav {
@@ -343,5 +375,9 @@ footer {
   .photo {
     width: 100%;
     max-width: 420px;
+  }
+
+ .counter-grid {
+    grid-template-columns: repeat(4, 1fr); 
   }
 }
