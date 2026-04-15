@@ -15,7 +15,6 @@ function inVisible(element) {
 }
 
 function animateCounter(element) {
-  /* If it's already been counted, stop */
   if (element.classList.contains('counted')) return;
 
   const rawValue = element.getAttribute('data-max');
@@ -64,12 +63,10 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     card.addEventListener("click", function (event) {
-      // Don't flip if the user clicks a link inside the card
       if (event.target.tagName === 'A') return;
       flipCard();
     });
 
-    // Listen for Enter key when card is focused
     card.addEventListener("keydown", function (event) {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();

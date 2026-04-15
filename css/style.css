@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
 }
+
+/* adapted from Garrett project */
 .skip a {
   position: absolute;
   top: -65px;
@@ -12,8 +14,6 @@
   border: 1px solid #00274c;
   transition: top 0.3s ease-in;
 }
-
-/* adapted from Garrett project */
 .skip a:focus {
   top: 85px;
 }
@@ -231,8 +231,6 @@ ul {
   margin-top: 20px;
 }
 
-
-
 .section-heading {
   margin-bottom: 20px;
 }
@@ -316,62 +314,6 @@ footer {
   font-size: 15px;
 }
 
-@media (min-width: 768px) {
-  nav {
-    padding: 16px 32px;
-  }
-
-  section {
-    padding: 64px 32px;
-  }
-
-  #landing {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 40px;
-    align-items: center;
-    min-height: 80vh;
-  }
-
-  .landing-buttons {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-
-  .resume-preview {
-    padding: 28px;
-  }
-
-  .resume-preview h3 {
-    font-size: 32px;
-  }
-
-
-  .card-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  .experience-item,
-  .project-item {
-    margin-bottom: 0;
-  }
-
-
- .counter-grid {
-    grid-template-columns: repeat(4, 1fr); 
-  }
-
-  .card,
-  .faces,
-  .front,
-  .back {
-    min-height: 260px;
-  }
-}
-
 /* code from: https://codepen.io/TPG/pen/pvJLvvo */
 /* Container for the 3D space */
 .card {
@@ -428,6 +370,63 @@ footer {
   z-index: 5;
   padding: 6px 10px;
   cursor: pointer;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  nav {
+    padding: 16px 32px;
+  }
+
+  section {
+    padding: 64px 32px;
+  }
+
+  #landing {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .landing-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .resume-preview {
+    padding: 28px;
+  }
+
+  .resume-preview h3 {
+    font-size: 32px;
+  }
+
+
+  .card-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .experience-item,
+  .project-item {
+    margin-bottom: 0;
+  }
+
+
+ .counter-grid {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+
+  .card,
+  .faces,
+  .front,
+  .back {
+    min-height: 260px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
